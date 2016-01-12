@@ -11,10 +11,9 @@ function wfGetFeaturedPage($input, array $args, Parser $parser) {
 	//Set your timezone 
 	date_default_timezone_set('America/Los_Angeles');
 	
-	//To program your article content each day, you can also use other PHP date functions to program new content on an hourly or minutely basis.
+	//To program your article content each day. Choose a start date, or you can also use other PHP date functions to program new content on an hourly or minutely basis.
 	$startDate = date('Y-m-d');
 
-	//This is the article title that will change daily
 	$featuredArticle = array();
 
 	//Gets different article title for each day 
@@ -28,7 +27,6 @@ function wfGetFeaturedPage($input, array $args, Parser $parser) {
 			$featuredArticle[0] = "Oranges";
 			break;
 		//Continue adding cases so that a new article is chosen on other days after August 2nd, 2013
-
 	}
 
 	$title = Title::newFromText($featuredArticle[0]);
